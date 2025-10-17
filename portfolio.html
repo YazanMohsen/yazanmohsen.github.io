@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yazan Mohsen | Back-end Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+      --muted: #94a3b8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent);
+      animation: fadeIn 1s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1e293b;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e293b;
+      color: var(--muted);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yazan Mohsen</h1>
+    <p>Back-end Developer | Damascus, Syria</p>
+    <p>📧 yazanmohsen008@gmail.com | 📞 +963-945408059</p>
+    <p>
+      <a href="https://linkedin.com/in/yazanmohsen" target="_blank" style="color:var(--accent);">LinkedIn</a> |
+      <a href="https://github.com/YazanMohsen008" target="_blank" style="color:var(--accent);">GitHub</a>
+    </p>
+  </header>
+
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Java, Spring Boot, Python, Flask</div>
+      <div class="card">FileNet, IBM WebSphere, IBM MFP</div>
+      <div class="card">Docker, Kubernetes, Azure, Git</div>
+      <div class="card">SQL, MongoDB, Oracle, PostgreSQL</div>
+      <div class="card">REST APIs, OOP, MVC, Clean Architecture</div>
+      <div class="card">CI/CD, Jenkins, Jira, Trello, Agile</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Team Lead – Smart Software Solutions</h3>
+        <p>Dec 2023 – Present</p>
+        <ul>
+          <li>Designed scalable systems with UML</li>
+          <li>Improved performance by 30%</li>
+          <li>Built semantic search engine</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Senior Back-end Developer</h3>
+        <p>Apr 2022 – Nov 2023</p>
+        <ul>
+          <li>Enhanced security by 70%</li>
+          <li>Reduced issue-solving time by 50%</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Junior Back-end Developer</h3>
+        <p>Mar 2021 – Mar 2022</p>
+        <ul>
+          <li>Built APIs for 5+ enterprise apps</li>
+          <li>Integrated payment and loyalty systems</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h4>Smart Content Management</h4>
+        <p>Document control layer for 5 enterprise apps</p>
+      </div>
+      <div class="card">
+        <h4>CMS</h4>
+        <p>Inbox workflow system using Spring Boot</p>
+      </div>
+      <div class="card">
+        <h4>Almeera App</h4>
+        <p>Shopping app with Azure + JWT + SSL</p>
+      </div>
+      <div class="card">
+        <h4>CCHS Booking</h4>
+        <p>Transport ticket system with credit card support</p>
+      </div>
+      <div class="card">
+        <h4>SIIB Loyalty</h4>
+        <p>Voucher redemption for 5,000+ POS transactions</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yazanmohsen008@gmail.com" style="color:var(--accent);">yazanmohsen008@gmail.com</a></p>
+    <p>Phone: +963-945408059</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yazanmohsen" target="_blank" style="color:var(--accent);">linkedin.com/in/yazanmohsen</a></p>
+    <p>GitHub: <a href="https://github.com/YazanMohsen008" target="_blank" style="color:var(--accent);">github.com/YazanMohsen008</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Yazan Mohsen. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
