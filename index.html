@@ -1,207 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yazan Mohsen | Back-end Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --text: #e2e8f0;
-      --accent: #38bdf8;
-      --muted: #94a3b8;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: var(--accent);
-      animation: fadeIn 1s ease-in-out;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-top: 1rem;
-      animation: fadeIn 2s ease-in-out;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: #1e293b;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      z-index: 1000;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: var(--accent);
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 4rem 1rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #1e293b;
-      color: var(--muted);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yazan Mohsen | Back-end Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .accordion-button::after {
+        filter: brightness(0) invert(1); /* Makes the arrow white */
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: #f8f9fa;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+      }
+      h2 {
+        border-bottom: 2px solid #17a2b8;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+      }
+      a {
+        color: #17a2b8;
+      }
+      a:hover {
+        color: #0dcaf0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="text-center py-5">
+      <img
+        src="Images/yazanmohsen.png"
+        alt="Yazan Mohsen"
+        class="rounded-circle border border-info shadow mb-3"
+        width="160"
+      />
+      <h1 class="text-info">Yazan Mohsen</h1>
+      <p class="text-light">Back-end Developer | Damascus, Syria</p>
+      <p>
+        <i class="fas fa-envelope"></i> yazanmohsen008@gmail.com |
+        <i class="fas fa-phone"></i> +963-945408059
+      </p>
+      <p>
+        <a href="https://linkedin.com/in/yazanmohsen" target="_blank"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        |
+        <a href="https://github.com/YazanMohsen008" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </p>
+    </header>
 
-  <header>
-    <h1>Yazan Mohsen</h1>
-    <p>Back-end Developer | Damascus, Syria</p>
-    <p>📧 yazanmohsen008@gmail.com | 📞 +963-945408059</p>
-    <p>
-      <a href="https://linkedin.com/in/yazanmohsen" target="_blank" style="color:var(--accent);">LinkedIn</a> |
-      <a href="https://github.com/YazanMohsen008" target="_blank" style="color:var(--accent);">GitHub</a>
-    </p>
-  </header>
-
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Java, Spring Boot, Python, Flask</div>
-      <div class="card">FileNet, IBM WebSphere, IBM MFP</div>
-      <div class="card">Docker, Kubernetes, Azure, Git</div>
-      <div class="card">SQL, MongoDB, Oracle, PostgreSQL</div>
-      <div class="card">REST APIs, OOP, MVC, Clean Architecture</div>
-      <div class="card">CI/CD, Jenkins, Jira, Trello, Agile</div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Team Lead – Smart Software Solutions</h3>
-        <p>Dec 2023 – Present</p>
-        <ul>
-          <li>Designed scalable systems with UML</li>
-          <li>Improved performance by 30%</li>
-          <li>Built semantic search engine</li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-dark border-top border-info">
+      <div class="container justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#skills"
+              ><i class="fas fa-code"></i> Skills</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#experience"
+              ><i class="fas fa-briefcase"></i> Experience</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#projects"
+              ><i class="fas fa-project-diagram"></i> Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#education"
+              ><i class="fas fa-graduation-cap"></i> Education</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#contact"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
         </ul>
       </div>
-      <div class="card">
-        <h3>Senior Back-end Developer</h3>
-        <p>Apr 2022 – Nov 2023</p>
+    </nav>
+
+    <!-- Skills -->
+    <section id="skills" class="container py-5">
+      <h2 class="text-info">Skills</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Programming Languages</h5>
+            <p>Java, Python, PHP, HTML, CSS, JavaScript, TypeScript</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Frameworks</h5>
+            <p>Spring Boot, Flask, Laravel</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Databases</h5>
+            <p>SQL Server, MongoDB, Oracle, PostgreSQL</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>IBM Technologies</h5>
+            <p>IBM FileNet, WebSphere, MobileFirst</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>DevOps & Cloud</h5>
+            <p>Docker, Kubernetes, Azure</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Architecture & APIs</h5>
+            <p>Clean Architecture, REST APIs, OOP, MVC</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Tools</h5>
+            <p>Git, CI/CD, Jenkins</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 glass-card">
+            <h5>Project Management</h5>
+            <p>Jira, Trello, Agile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="container py-5">
+      <h2 class="text-info">Experience</h2>
+      <div class="glass-card p-4">
+        <h5>Smart Software Solutions — Doha, Qatar</h5>
+        <p><strong>Back-end Team Lead</strong> (Dec 2023 – Present)</p>
         <ul>
-          <li>Enhanced security by 70%</li>
-          <li>Reduced issue-solving time by 50%</li>
+          <li>
+            Analyzed requirements and designed scalable systems using UML
+            diagrams, saving implementation time and increasing system
+            maintainability.
+          </li>
+          <li>
+            Improved system performance by introducing asynchronous service
+            processing to handle a high volume of daily requests.
+          </li>
+          <li>
+            Contributed to team growth by mentoring junior developers, resulting
+            in measurable improvements in code quality and delivery speed.
+          </li>
+          <li>
+            Architected the core architecture for the company's new Process
+            Engine product, establishing a foundational framework that underpins
+            multiple integrated systems.
+          </li>
+          <li>
+            Led backend performance optimization initiatives, improving system
+            responsiveness and reliability under heavy load conditions.
+          </li>
+        </ul>
+        <p><strong>Senior Back-end Developer</strong> (Apr 2022 – Nov 2023)</p>
+        <ul>
+          <li>
+            Built and maintained secure, scalable backend systems for enterprise
+            and government-grade applications, supporting high-volume
+            transactions and complex workflows.
+          </li>
+          <li>
+            Developed modular services and deployed them across cloud and
+            on-premise environments, ensuring seamless integration with legacy
+            platforms and high system availability.
+          </li>
+          <li>
+            Automated document handling and approval processes for large
+            organizations, implementing robust access controls and centralized
+            storage solutions.
+          </li>
+          <li>
+            Applied a semantic search engine to query enterprises’ documents
+            based on their main concept, improving customer search experience.
+          </li>
+        </ul>
+        <p><strong>Junior Back-end Developer</strong> (Mar 2021 – Mar 2022)</p>
+        <ul>
+          <li>
+            Automated core backend functionality and APIs for more than 5
+            enterprises and e-commerce applications using Spring Boot and OOP
+            principles.
+          </li>
+          <li>
+            Delivered a travel ticket booking system with a team of 5
+            developers, integrated with a Payment Gateway and CRM System,
+            deployed over IBM MobileFirst.
+          </li>
+          <li>
+            Engineered asynchronous workflows and redemption systems for
+            high-volume retail environments, integrating real-time communication
+            with financial systems.
+          </li>
+          <li>
+            Delivered payment-enabled platforms with real-time notifications and
+            secure transaction processing, enhancing user experience and
+            operational reliability.
+          </li>
         </ul>
       </div>
-      <div class="card">
-        <h3>Junior Back-end Developer</h3>
-        <p>Mar 2021 – Mar 2022</p>
+    </section>
+    <section id="projects" class="container py-5">
+      <h2 class="text-info">Projects</h2>
+      <div class="glass-card p-4 mb-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img
+              src="https://tse4.mm.bing.net/th/id/OIP.xuhIktgV9HzgdDpOdyUJAAHaEd?rs=1&pid=ImgDetMain&o=7&rm=3"
+              class="img-fluid rounded"
+              alt="CMS System"
+            />
+          </div>
+          <div class="col-md-8">
+            <h4 class="text-info">Correspondence Management System (CMS)</h4>
+            <p>
+              A government-grade platform designed to automate and manage
+              official communications across departments. It supports the full
+              lifecycle of correspondence — from creation and routing to
+              approval, archiving, and retrieval — ensuring secure, scalable
+              operations and compliance with regulatory standards.
+            </p>
+            <div
+              class="accordion mt-3 text-white"
+              style="background-color: transparent"
+              id="cmsAccordion"
+            >
+              <div
+                class="accordion-item text-white"
+                style="background-color: transparent"
+              >
+                <h2
+                  class="accordion-header text-white"
+                  style="background-color: transparent"
+                  id="headingCMS"
+                >
+                  <button
+                    class="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseCMS"
+                    aria-expanded="false"
+                    style="background-color: transparent"
+                    aria-controls="collapseCMS"
+                  >
+                    Role Overview & Technologies
+                  </button>
+                </h2>
+                <div
+                  id="collapseCMS"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingCMS"
+                  data-bs-parent="#cmsAccordion"
+                  style="background-color: transparent"
+                >
+                  <div
+                    class="accordion-body text-white"
+                    style="background-color: transparent"
+                  >
+                    <ul>
+                      <li>
+                        Led the backend architecture and workflow automation for
+                        a government integration platform using the IBM FileNet
+                        suite, which included: <br />
+                        <strong>IBM FileNet Content Engine</strong> Managed and
+                        stored enterprise documents and metadata in a scalable,
+                        secure repository, enabling centralized access and
+                        version control. <br />
+                        <strong>IBM FileNet Process Engine</strong>
+                        Orchestrated complex business workflows, automating
+                        approval cycles and document routing across ministries.
+                        <br />
+                        <strong>IBM FileNet Workplace</strong> Provided a
+                        web-based interface for users to interact with content
+                        and workflows, supporting role-based access and task
+                        management. <br />
+                        <strong
+                          >IBM FileNet ACCE (Administrative Console for Content
+                          Engine)</strong
+                        >
+                        Used for configuring and administering the content
+                        repository, including object classes, properties, and
+                        security policies.<br />
+                        <strong>IBM FileNet Navigator</strong> Delivered a
+                        modern, customizable user experience for document
+                        management and workflow interaction, integrated with
+                        other enterprise systems. This architecture enabled
+                        secure, scalable integration across government entities,
+                        reduced manual processing, and ensured compliance with
+                        regulatory standards.
+                      </li>
+                      <li>
+                        Designed and implemented secure APIs and microservices
+                        using Java and Spring Boot, deployed over IBM WebSphere
+                        Application Server to support scalable, enterprise-grade
+                        backend operations. This included:
+                        <br />
+                        <strong>Java & Spring Boot</strong>
+                        Built modular, maintainable microservices with RESTful
+                        endpoints, leveraging Spring Security for authentication
+                        and Spring Data for database interactions.
+                        <br />
+                        <strong>Secure API Design</strong>
+                        Applied best practices for input validation, encryption,
+                        and token-based authentication (e.g., JWT, OAuth2) to
+                        protect sensitive data and ensure compliance.
+                        <br />
+                        <strong>IBM WebSphere Deployment</strong>
+                        Used WebSphere for robust enterprise hosting,
+                        transaction management, and integration with legacy
+                        systems, ensuring high availability and performance
+                        under load.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 mb-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img
+              width="400"
+              height="300"
+              src="https://th.bing.com/th/id/R.fe27c430fa7b5b86a73a98d80d17e55d?rik=vv7wpA0dZsjobQ&pid=ImgRaw&r=0"
+              class="img-fluid rounded"
+              alt="Almeera"
+            />
+          </div>
+          <div class="col-md-8">
+            <h4 class="text-info">Almeera Shopping Application</h4>
+            <p>
+              Developed and deployed a high-performance payment application that
+              facilitated seamless transactions through Google Wallet, Apple
+              Wallet, and Cybersource Payment Gateway, serving approximately
+              1,000 daily users. The backend was built using Spring Boot and
+              Java, with RESTful APIs ensuring modularity and maintainability.
+              The solution was deployed on Azure Cloud with a scalable
+              architecture and CI/CD pipelines to support continuous delivery.
+              Security was enforced through JWT and Basic Authentication,
+              alongside SSL encryption for data protection. This architecture
+              ensured reliability, compliance with modern payment standards, and
+              a smooth user experience across platforms.
+            </p>
+            <div
+              class="accordion mt-3 text-white"
+              style="background-color: transparent"
+              id="AlmeeraAccordion"
+            >
+              <div
+                class="accordion-item text-white"
+                style="background-color: transparent"
+              >
+                <h2
+                  class="accordion-header text-white"
+                  style="background-color: transparent"
+                  id="headingAlmeera"
+                >
+                  <button
+                    class="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseAlmeera"
+                    aria-expanded="false"
+                    style="background-color: transparent"
+                    aria-controls="collapseAlmeera"
+                  >
+                    Role Overview & Technologies
+                  </button>
+                </h2>
+                <div
+                  id="collapseAlmeera"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingAlmeera"
+                  data-bs-parent="#AlmeeraAccordion"
+                  style="background-color: transparent"
+                >
+                  <div
+                    class="accordion-body text-white"
+                    style="background-color: transparent"
+                  >
+                    <ul>
+                      <li>
+                        Developed and maintained a secure payment application
+                        serving ~10,000 daily users.
+                      </li>
+                      <li>
+                        Integrated Google Wallet, Apple Wallet, and Cybersource
+                        Payment Gateway.
+                      </li>
+                      <li>
+                        Built backend services using Spring Boot with RESTful
+                        APIs.
+                      </li>
+                      <li>
+                        Deployed on Azure Cloud with scalable architecture and
+                        CI/CD pipelines.
+                      </li>
+                      <li>
+                        Implemented push notifications via Azure Notification
+                        Hub.
+                      </li>
+                      <li>
+                        Managed transactional data using Azure SQL Server.
+                      </li>
+                      <li>
+                        Secured endpoints with JWT and Basic Authentication,
+                        enforced SSL protocol.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 mb-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img
+              src="https://img.freepik.com/premium-vector/digital-travel-online-shopping-illustration_961875-493382.jpg"
+              class="img-fluid rounded"
+              alt="CCHS Booking"
+            />
+          </div>
+          <div class="col-md-8">
+            <h4 class="text-info">CCHS- Ticket Booking System</h4>
+            <p>
+              Developed and deployed a transportation booking application that
+              enabled users to seamlessly purchase tickets using secure credit
+              card transactions. The system supported real-time availability,
+              dynamic pricing, and multi-route selection, enhancing the overall
+              user experience. Integration with payment gateways ensured
+              compliance with financial standards and data protection protocols.
+              The application’s intuitive interface and reliable backend
+              contributed to a 30% increase in ticket purchases, streamlining
+              operations for both users and service providers. Designed for
+              scalability and performance, the solution handled high traffic
+              volumes while maintaining transactional integrity and speed
+            </p>
+            <div
+              class="accordion mt-3 text-white"
+              style="background-color: transparent"
+              id="CCHSAccordion"
+            >
+              <div
+                class="accordion-item text-white"
+                style="background-color: transparent"
+              >
+                <h2
+                  class="accordion-header text-white"
+                  style="background-color: transparent"
+                  id="headingCCHS"
+                >
+                  <button
+                    class="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseCCHS"
+                    aria-expanded="false"
+                    style="background-color: transparent"
+                    aria-controls="collapseCCHS"
+                  >
+                    Role Overview & Technologies
+                  </button>
+                </h2>
+                <div
+                  id="collapseCCHS"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingCCHS"
+                  data-bs-parent="#CCHSAccordion"
+                  style="background-color: transparent"
+                >
+                  <div
+                    class="accordion-body text-white"
+                    style="background-color: transparent"
+                  >
+                    <ul>
+                      <li>
+                        Designed and implemented a mobile booking application
+                        for transportation ticketing
+                      </li>
+                      <li>
+                        Enabled secure credit card payments, contributing to a
+                        30% increase in ticket purchases
+                      </li>
+                      <li>
+                        Deployed the solution using IBM MobileFirst Platform for
+                        cross-device compatibility
+                      </li>
+                      <li>
+                        Integrated secure hashing mechanisms to protect
+                        sensitive user and payment data
+                      </li>
+                      <li>
+                        Optimized user experience for fast, reliable ticket
+                        selection and checkout
+                      </li>
+                      <li>
+                        Collaborated with stakeholders to align technical
+                        delivery with business goals
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 mb-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <img
+              src="https://thvnext.bing.com/th/id/OIP.SXlrjFkuc-t1SQxLdl3dewHaGz?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+              class="img-fluid rounded-start"
+              alt="SIIB Loyalty"
+            />
+          </div>
+          <div class="col-md-8">
+            <h4 class="text-info">SIIB Loyalty System</h4>
+            <p>
+              Developed and deployed a scalable loyalty application tailored to
+              handle asynchronous redemption across more than 5,000
+              point-of-sale transactions. The system was engineered for high
+              performance and reliability, ensuring smooth reward processing
+              even under heavy transactional loads. I implemented scheduled
+              workflows using custom logic, integrated dynamic barcode
+              generation for user rewards, and enabled real-time SMS
+              notifications to enhance customer engagement. The backend was
+              optimized to maintain speed and consistency, while secure
+              communication protocols ensured data integrity between POS
+              terminals and the loyalty platform.
+            </p>
+            <div
+              class="accordion mt-3 text-white"
+              style="background-color: transparent"
+              id="SIIBAccordion"
+            >
+              <div
+                class="accordion-item text-white"
+                style="background-color: transparent"
+              >
+                <h2
+                  class="accordion-header text-white"
+                  style="background-color: transparent"
+                  id="headingSIIB"
+                >
+                  <button
+                    class="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSIIB"
+                    aria-expanded="false"
+                    style="background-color: transparent"
+                    aria-controls="collapseSIIB"
+                  >
+                    Role Overview & Technologies
+                  </button>
+                </h2>
+                <div
+                  id="collapseSIIB"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingCCHS"
+                  data-bs-parent="#SIIBAccordion"
+                  style="background-color: transparent"
+                >
+                  <div
+                    class="accordion-body text-white"
+                    style="background-color: transparent"
+                  >
+                    <ul>
+                      <li>
+                        Engineered a scalable loyalty application for
+                        asynchronous redemption across 5,000+ POS. transactions
+                      </li>
+                      <li>
+                        Designed and implemented scheduled redemption workflows
+                        using custom Scheduler logic.
+                      </li>
+                      <li>
+                        Generated dynamic barcodes for user rewards using
+                        Barcode4j.
+                      </li>
+                      <li>
+                        Integrated SMS Service for real-time user notifications
+                        and redemption confirmations.
+                      </li>
+                      <li>
+                        Optimized backend performance to handle high-volume
+                        transactional loads.
+                      </li>
+                      <li>
+                        Ensured secure and reliable communication between POS
+                        systems and loyalty backend.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container py-5">
+      <h2 class="text-info">Education</h2>
+      <div class="glass-card p-4">
+        <h5>Damascus University</h5>
+        <p>Bachelor of Information Technology Engineering</p>
+        <p>Graduated: September 2022 | GPA: 4.0</p>
+      </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section id="additional-info" class="container py-5">
+      <h2 class="text-info">Additional Information</h2>
+      <div class="glass-card p-4">
         <ul>
-          <li>Built APIs for 5+ enterprise apps</li>
-          <li>Integrated payment and loyalty systems</li>
+          <li>
+            <strong>Languages:</strong> Arabic (native), English
+            (conversational)
+          </li>
+          <li>
+            <strong>Soft Skills:</strong> Flexibility, self-motivation,
+            creativity, conflict resolution
+          </li>
+          <li><strong>Birth:</strong> September 1999</li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="contact" class="container py-5">
+      <h2 class="text-info">Contact Me</h2>
+      <div class="glass-card p-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Location & Email -->
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-envelope fa-lg text-info me-3 mt-3 fs-1"></i>
+              <div>
+                <h5 class="mb-1">Email</h5>
+                <p class="mb-0">
+                  <a
+                    href="mailto:yazanmohsen008@gmail.com"
+                    class="text-info text-decoration-none"
+                  >
+                    yazanmohsen008@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h4>Smart Content Management</h4>
-        <p>Document control layer for 5 enterprise apps</p>
-      </div>
-      <div class="card">
-        <h4>CMS</h4>
-        <p>Inbox workflow system using Spring Boot</p>
-      </div>
-      <div class="card">
-        <h4>Almeera App</h4>
-        <p>Shopping app with Azure + JWT + SSL</p>
-      </div>
-      <div class="card">
-        <h4>CCHS Booking</h4>
-        <p>Transport ticket system with credit card support</p>
-      </div>
-      <div class="card">
-        <h4>SIIB Loyalty</h4>
-        <p>Voucher redemption for 5,000+ POS transactions</p>
-      </div>
-    </div>
-  </section>
+          <!-- Phone & Portfolio -->
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone fa-lg text-info me-3 mt-3 fs-1"></i>
+              <div>
+                <h5 class="mb-1">Phone</h5>
+                <p class="mb-2">
+                  <a
+                    href="tel:+963945408059"
+                    class="text-info text-decoration-none"
+                  >
+                    +963-945408059
+                  </a>
+                </p>
+        
+              </div>
+            </div>
+          </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:yazanmohsen008@gmail.com" style="color:var(--accent);">yazanmohsen008@gmail.com</a></p>
-    <p>Phone: +963-945408059</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yazanmohsen" target="_blank" style="color:var(--accent);">linkedin.com/in/yazanmohsen</a></p>
-    <p>GitHub: <a href="https://github.com/YazanMohsen008" target="_blank" style="color:var(--accent);">github.com/YazanMohsen008</a></p>
-  </section>
+          <!-- LinkedIn -->
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <i class="fab fa-linkedin fa-lg text-info me-3 mt-3 fs-1"></i>
+              <div>
+                <h5 class="mb-1">LinkedIn</h5>
+                <p class="mb-0">
+                  <a
+                    href="https://linkedin.com/in/yazanmohsen"
+                    target="_blank"
+                    class="text-info text-decoration-none"
+                  >
+                    linkedin.com/in/yazanmohsen
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <footer>
-    <p>© 2025 Yazan Mohsen. All rights reserved.</p>
-  </footer>
+          <!-- GitHub -->
+          <div class="col">
+            <div class="d-flex align-items-start">
+              <i class="fab fa-github fa-lg text-info me-3 mt-3 fs-1"></i>
+              <div>
+                <h5 class="mb-1">GitHub</h5>
+                <p class="mb-0">
+                  <a
+                    href="https://github.com/YazanMohsen008"
+                    target="_blank"
+                    class="text-info text-decoration-none"
+                  >
+                    github.com/YazanMohsen008
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
